@@ -24,6 +24,6 @@ Repositório dedicado à documentação das atividades práticas realizadas na d
 
 ## 📂 Visão Geral do Aprendizado
 
-* **Infraestrutura e Virtualização:** Instalação do SO, particionamento com LVM e acesso remoto via SSH[cite: 1].
-* **Administração de Sistemas:** Gerenciamento do ciclo de vida de usuários, grupos e navegação no FHS (`/etc`, `/var`, `/srv`, `/home`)[cite: 1].
-* **Segurança e Acesso:** Aplicação e validação de permissões de arquivo/diretório (`chmod`, `chown`, `chgrp`, permissões `770` e `660`)[cite: 1].
+* **Infraestrutura e Virtualização:** Instalação do SO, particionamento com LVM e acesso remoto via SSH.
+* **Administração de Sistemas:** Gerenciamento do ciclo de vida de usuários, grupos e navegação no FHS (`/etc`, `/var`, `/srv`, `/home`).
+* **Segurança e Acesso:** Aplicação e validação de permissões de arquivo/diretório (`chmod`, `chown`, `chgrp`, permissões `770` e `660`).
