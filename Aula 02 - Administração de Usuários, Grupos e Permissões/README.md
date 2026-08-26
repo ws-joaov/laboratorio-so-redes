@@ -407,11 +407,8 @@ Ao executar `su - fulano` ou `su - novato` e tentar o comando `cd /srv/financeir
 
 
 | Problema Encontrado | Causa do Problema | Solução Aplicada |
-
-
-
+| --- | --- | --- |
 | Comportamento inesperado ao testar permissões com `su` | Utilização do comando `su usuario` sem o hífen `-`, mantendo o diretório e contexto da sessão anterior. | Utilização estrita da sintaxe `su - usuario` para forçar o carregamento de uma *Login Shell* completa. |
-
 | Erro ao tentar editar arquivo em `/srv/projeto` | Arquivo criado incialmente pelo `root` sem a permissão de escrita para o grupo `devs`. | Aplicação do comando `chmod 660 /srv/projeto/config\_redes.txt` definindo escrita para o grupo. |
 
 
