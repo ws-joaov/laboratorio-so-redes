@@ -1,8 +1,8 @@
-\# Relatório Técnico – Aula Prática 02: Administração de Usuários, Grupos e Permissões no Linux
+# Relatório Técnico – Aula Prática 02: Administração de Usuários, Grupos e Permissões no Linux
 
 
 
-\---
+---
 
 
 
@@ -15,41 +15,42 @@
 
 
 
-\---
+---
 
 
 
-\## 2. Objetivo
+
+## 2. Objetivo
 
 Capacitar-se na administração do controle de acesso no Ubuntu Server 26.04 LTS, englobando a criação e gerenciamento de contas de usuário e grupos de trabalho, o manuseio de propriedades de arquivos/diretórios via `chown` e `chgrp`, a aplicação de permissões em modo octal (`chmod`) e a validação do isolamento de acessos via terminal.
 
 
 
-\---
+---
 
 
 
-\## 3. Ambiente do Laboratório
+## 3. Ambiente do Laboratório
 
-\* \*\*Sistema Operacional Hospedeiro (Host):\*\* Windows
+* **Sistema Operacional Hospedeiro (Host):** Windows
 
-\* \*\*Hipervisor:\*\* Oracle VM VirtualBox
+* **Hipervisor:** Oracle VM VirtualBox
 
-\* \*\*Sistema Operacional Convidado (Guest):\*\* Ubuntu Server 26.04 LTS (`ubuntu\_server`)
+* **Sistema Operacional Convidado (Guest):** Ubuntu Server 26.04 LTS (`ubuntu\_server`)
 
-\* \*\*Usuário de Administração:\*\* `administrador` (com acesso `sudo`)
-
-
-
-\---
+* **Usuário de Administração:** `administrador` (com acesso `sudo`)
 
 
 
-\## 4. Procedimento de Configuração
+---
 
 
 
-\### 4.1. Criação dos Usuários do Sistema
+## 4. Procedimento de Configuração
+
+
+
+### 4.1. Criação dos Usuários do Sistema
 
 Com o usuário `administrador`, foram criadas quatro contas de teste no sistema através do utilitário `adduser`:
 
@@ -69,11 +70,11 @@ sudo adduser novato
 
 
 
-\*A validação das contas foi confirmada inspecionando as últimas linhas do arquivo `/etc/passwd` com `tail -n 4 /etc/passwd`.\*
+*A validação das contas foi confirmada inspecionando as últimas linhas do arquivo `/etc/passwd` com `tail -n 4 /etc/passwd`.*
 
 
 
-\### 4.2. Criação de Grupos e Associação de Usuários
+### 4.2. Criação de Grupos e Associação de Usuários
 
 
 
@@ -111,11 +112,11 @@ sudo usermod -aG devs beltrano
 
 
 
-\*A verificação do grupo foi realizada consultando o arquivo `/etc/group` via `grep "devs" /etc/group`.\*
+*A verificação do grupo foi realizada consultando o arquivo `/etc/group` via `grep "devs" /etc/group`.*
 
 
 
-\### 4.3. Criação do Diretório Compartilhado e Posse
+### 4.3. Criação do Diretório Compartilhado e Posse
 
 
 
@@ -151,7 +152,7 @@ sudo chgrp devs /srv/projeto
 
 
 
-\### 4.4. Aplicação de Permissões (Modo Octal)
+### 4.4. Aplicação de Permissões (Modo Octal)
 
 
 
@@ -187,19 +188,19 @@ sudo chmod 660 /srv/projeto/config\_redes.txt
 
 
 
-\---
+---
 
 
 
-\## 5. Testes e Validação do Ambiente
+## 5. Testes e Validação do Ambiente
 
 
 
-A alternância de sessões para os testes foi realizada utilizando o comando `su - <usuario>` para garantir o carregamento de uma \*Login Shell\* limpa com as variáveis de ambiente e diretório base do perfil testado.
+A alternância de sessões para os testes foi realizada utilizando o comando `su - <usuario>` para garantir o carregamento de uma *Login Shell* limpa com as variáveis de ambiente e diretório base do perfil testado.
 
 
 
-\### 5.1. Teste A: Acesso com Usuário do Grupo (`fulano`)
+### 5.1. Teste A: Acesso com Usuário do Grupo (`fulano`)
 
 
 
@@ -237,7 +238,7 @@ cat config\_redes.txt
 
 
 
-\* \*\*Resultado:\*\* O usuário `fulano` conseguiu navegar no diretório e acrescentar conteúdo ao arquivo sem restrições, pois pertence ao grupo `devs`.
+* **Resultado:** O usuário `fulano` conseguiu navegar no diretório e acrescentar conteúdo ao arquivo sem restrições, pois pertence ao grupo `devs`.
 
 
 
@@ -245,7 +246,7 @@ cat config\_redes.txt
 
 
 
-\### 5.2. Teste B: Bloqueio com Usuário Externo (`novato`)
+### 5.2. Teste B: Bloqueio com Usuário Externo (`novato`)
 
 
 
@@ -279,7 +280,7 @@ cd /srv/projeto
 
 
 
-\* \*\*Resultado:\*\* O sistema retornou `-bash: cd: /srv/projeto: Permission denied`.
+* **Resultado:** O sistema retornou `-bash: cd: /srv/projeto: Permission denied`.
 
 
 
@@ -299,7 +300,7 @@ ls -l /srv/projeto
 
 
 
-\* \*\*Resultado:\*\* O sistema retornou `ls: cannot open directory '/srv/projeto': Permission denied`, validando o isolamento da permissão octal `770`.
+* **Resultado:** O sistema retornou `ls: cannot open directory '/srv/projeto': Permission denied`, validando o isolamento da permissão octal `770`.
 
 
 
@@ -307,11 +308,11 @@ ls -l /srv/projeto
 
 
 
-\---
+---
 
 
 
-\### 5.3. Execução do Exercício Prático de Fixação
+### 5.3. Execução do Exercício Prático de Fixação
 
 
 
@@ -319,7 +320,7 @@ Atendendo ao desafio proposto na atividade:
 
 
 
-1\. \*\*Criação do grupo `financeiro`:\*\*
+1\. **Criação do grupo `financeiro`:**
 
 ```bash
 
@@ -333,7 +334,7 @@ sudo groupadd financeiro
 
 
 
-2\. \*\*Associação dos usuários `cicrano` e `beltrano` ao novo grupo:\*\*
+2\. **Associação dos usuários `cicrano` e `beltrano` ao novo grupo:**
 
 ```bash
 
@@ -349,7 +350,7 @@ sudo usermod -aG financeiro beltrano
 
 
 
-3\. \*\*Criação da pasta e ajuste de propriedades:\*\*
+3\. **Criação da pasta e ajuste de propriedades:**
 
 ```bash
 
@@ -367,7 +368,7 @@ sudo chgrp financeiro /srv/financeiro
 
 
 
-4\. \*\*Aplicação das restrições de permissão (`770`):\*\*
+4\. **Aplicação das restrições de permissão (`770`):**
 
 ```bash
 
@@ -381,13 +382,13 @@ sudo chmod 770 /srv/financeiro
 
 
 
-5\. \*\*Validação dos privilégios do setor Financeiro:\*\*
+5\. **Validação dos privilégios do setor Financeiro:**
 
-\* \*\*Usuário `cicrano` (Pertence ao Financeiro):\*\*
+* **Usuário `cicrano` (Pertence ao Financeiro):**
 
 Ao executar `su - cicrano`, conseguiu navegar até `/srv/financeiro`, criar o arquivo `relatorio.txt` e salvar alterações.
 
-\* \*\*Usuários `fulano` e `novato` (Não pertencem ao Financeiro):\*\*
+* **Usuários `fulano` e `novato` (Não pertencem ao Financeiro):**
 
 Ao executar `su - fulano` ou `su - novato` e tentar o comando `cd /srv/financeiro`, ambos receberam `Permission denied`.
 
@@ -397,35 +398,31 @@ Ao executar `su - fulano` ou `su - novato` e tentar o comando `cd /srv/financeir
 
 
 
-\---
+---
 
 
 
-\## 6. Problemas Enfrentados e Soluções
+## 6. Problemas Enfrentados e Soluções
 
 
 
 | Problema Encontrado | Causa do Problema | Solução Aplicada |
 
-| --- | --- | --- |
-
-| \*\*Comportamento inesperado ao testar permissões com `su\*\*` | Utilização do comando `su usuario` sem o hífen `-`, mantendo o diretório e contexto da sessão anterior. | Utilização estrita da sintaxe `su - usuario` para forçar o carregamento de uma \*Login Shell\* completa. |
-
-| \*\*Erro ao tentar editar arquivo em `/srv/projeto\*\*` | Arquivo criado incialmente pelo `root` sem a permissão de escrita para o grupo `devs`. | Aplicação do comando `chmod 660 /srv/projeto/config\_redes.txt` definindo escrita para o grupo. |
 
 
+| Comportamento inesperado ao testar permissões com `su` | Utilização do comando `su usuario` sem o hífen `-`, mantendo o diretório e contexto da sessão anterior. | Utilização estrita da sintaxe `su - usuario` para forçar o carregamento de uma *Login Shell* completa. |
 
-\---
+| Erro ao tentar editar arquivo em `/srv/projeto` | Arquivo criado incialmente pelo `root` sem a permissão de escrita para o grupo `devs`. | Aplicação do comando `chmod 660 /srv/projeto/config\_redes.txt` definindo escrita para o grupo. |
 
 
 
-\## 7. Conclusão
+---
+
+
+
+## 7. Conclusão
 
 
 
 A prática demonstrou a eficiência do modelo de controle de acesso nativo do Linux baseado na trinca Dono/Grupo/Outros. A utilização combinada de grupos de trabalho (`groupadd`/`usermod`) e diretórios com permissões estritas em modo octal (`chmod 770`) provou ser uma solução simples e robusta para isolar dados sensíveis de diferentes departamentos em um servidor corporativo.
-
-
-
-```
 

@@ -78,7 +78,7 @@ A validação de atribuição do endereço de IP foi realizada com o comando:
 ```bash
 ip addr
 
-* **Resultado:** A interface `enp0s3` obteve com sucesso um endereço IPv4 no intervalo local (`10.0.2.15/24`) via DHCP do VirtualBox.
+Resultado: A interface `enp0s3` obteve com sucesso um endereço IPv4 no intervalo local (`10.0.2.15/24`) via DHCP do VirtualBox.
 
 ### 5.3. Verificação do Particionamento LVM
 
@@ -116,5 +116,3 @@ sudo apt-get update
 ## 7. Conclusão
 
 A prática permitiu compreender o fluxo completo de criação, alocação de recursos e instalação de um sistema operacional de rede em ambiente virtualizado. Foi possível analisar a aplicação prática do **LVM (Logical Volume Manager)** para flexibilização do armazenamento do servidor, bem como a importância da instalação do **OpenSSH Server** para permitir o gerenciamento remoto em ambientes de data center.
-
-```
