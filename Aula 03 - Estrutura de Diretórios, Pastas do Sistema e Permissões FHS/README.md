@@ -100,48 +100,13 @@ Para garantir a simulação idêntica a um novo login no servidor, utilizou-se o
 
 ### 5.1. Teste A: Acesso Autorizado do Membro do Setor (`fulano`)
 
-1. Autenticação na sessão do usuário `fulano`:
-```bash
-su - fulano
+![Print ATV 3_A](https://github.com/ws-joaov/laboratorio-so-redes/blob/main/Capturas%20de%20Tela/ATV%203/Print%20ATV%203_A.png)
 
-```
-
-
-2. Tentativa de navegação e leitura dos arquivos do departamento de TI:
-```bash
-cd /srv/ti-dept
-ls -l projetos/
-
-```
-
-
-
-* **Resultado:** O acesso foi concedido com sucesso. O arquivo `arquitetura_rede_vpn.txt` foi exibido com as permissões `-rw-rw----`, pois o usuário `fulano` faz parte do `ti-group`.
-
-3. Encerramento da sessão com `exit`.
 
 ### 5.2. Teste B: Bloqueio de Acesso de Usuário Externo (`cicrano`)
 
-1. Autenticação na sessão do usuário `cicrano` (membro da equipe de Vendas):
-```bash
-su - cicrano
+![Print ATV 3_B](https://github.com/ws-joaov/laboratorio-so-redes/blob/main/Capturas%20de%20Tela/ATV%203/Print%20ATV%203_B.png)
 
-```
-
-
-2. Tentativa de entrada na pasta confidencial do setor de TI:
-```bash
-cd /srv/ti-dept
-
-```
-
-
-
-* **Resultado:** O sistema operacional bloqueou o acesso imediatamente com a mensagem `-bash: cd: /srv/ti-dept: Permission denied`, confirmando a eficácia da máscara `770`.
-
-3. Encerramento da sessão com `exit`.
-
----
 
 ### 5.3. Resolução do Desafio Prático de Laboratório
 

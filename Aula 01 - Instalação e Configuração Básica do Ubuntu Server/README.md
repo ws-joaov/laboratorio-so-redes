@@ -75,21 +75,8 @@ O primeiro acesso foi efetuado com sucesso utilizando o usuário `administrador`
 
 ### 5.2. Verificação da Interface de Rede
 A validação de atribuição do endereço de IP foi realizada com o comando:
-```bash
-ip addr
 
-Resultado: A interface `enp0s3` obteve com sucesso um endereço IPv4 no intervalo local (`10.0.2.15/24`) via DHCP do VirtualBox.
-
-### 5.3. Verificação do Particionamento LVM
-
-Para checar a correta aplicação do layout de partições LVM, executou-se:
-
-```bash
-df -h
-
-```
-
-* **Resultado:** Confirmou-se o ponto de montagem principal `/` alocado sobre o volume lógico `/dev/mapper/ubuntu--vg-ubuntu--lv` (29 GB) e a partição `/boot` alocada separadamente em `/dev/sda1` (1 GB).
+![Testes ATV 1](https://github.com/ws-joaov/laboratorio-so-redes/blob/main/Capturas%20de%20Tela/ATV%201/Testes%20ATV%201.png)
 
 ### 5.4. Atualização dos Repositórios de Pacotes
 
