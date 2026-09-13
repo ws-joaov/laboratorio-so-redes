@@ -46,9 +46,9 @@ Configurar o acesso remoto seguro via SSH (Secure Shell) em um ambiente com inte
 
 * Testou-se o rastreamento de saltos até a internet com `traceroute 8.8.8.8`.
 
-> `![Print1](https://github.com/ws-joaov/laboratorio-so-redes/raw/main/Capturas%20de%20Tela/ATV%205/Print1.png)`
+> ![Print1](https://github.com/ws-joaov/laboratorio-so-redes/blob/main/Capturas%20de%20Tela/ATV%205/Print1.png)
 
-> `![Print2](https://github.com/ws-joaov/laboratorio-so-redes/raw/main/Capturas%20de%20Tela/ATV%205/Print2.png)`
+> ![Print2](https://github.com/ws-joaov/laboratorio-so-redes/blob/main/Capturas%20de%20Tela/ATV%205/Print2.png)
 
 ### 5.2. Diagnóstico no Host Windows
 #### Executando netstat -an | findstr 5222 ANTES de ativar o redirecionamento (vazio/sem resposta).
@@ -84,7 +84,7 @@ netstat -an | findstr 2222
 
 ```
 
-> `![Print3](https://github.com/ws-joaov/laboratorio-so-redes/raw/main/Capturas%20de%20Tela/ATV%205/Print3.png)`
+> ![Print3](https://github.com/ws-joaov/laboratorio-so-redes/blob/main/Capturas%20de%20Tela/ATV%205/Print3.png)
 
 ---
 
@@ -93,7 +93,7 @@ netstat -an | findstr 2222
 
 Acessou-se **Configurações da VM** -> **Rede** -> **Adaptador 1 (NAT)** -> **Avançado** -> **Redirecionamento de Portas** e cadastrou-se a seguinte regra:
 
-> `![Print4](https://github.com/ws-joaov/laboratorio-so-redes/raw/main/Capturas%20de%20Tela/ATV%205/Print4.png)`
+> ![Print4](https://github.com/ws-joaov/laboratorio-so-redes/blob/main/Capturas%20de%20Tela/ATV%205/Print4.png)
 
 ---
 
@@ -121,7 +121,7 @@ w
 
 * **Análise da saída:** Identificou-se a sessão `tty1` (console local do VirtualBox) e a nova sessão `pts/0` (pseudo-terminal do acesso remoto SSH vindo de `10.0.2.2`).
 
-> `![Print5](https://github.com/ws-joaov/laboratorio-so-redes/raw/main/Capturas%20de%20Tela/ATV%205/Print5.png)`
+> ![Print5](https://github.com/ws-joaov/laboratorio-so-redes/blob/main/Capturas%20de%20Tela/ATV%205/Print5.png)
 
 ---
 
