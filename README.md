@@ -9,21 +9,16 @@ Repositório dedicado à documentação das atividades práticas realizadas na d
 
 ## 📌 Atividades Práticas
 
-| Aula | Tema | Documentação |
-| :--- | :--- | :---: |
-| **Aula 01** | Virtualização e Instalação do Ubuntu Server | Aula 01 - Instalação e Configuração Básica do Ubuntu Server/README.md |
-| **Aula 02** | Gestão de Usuários, Grupos e Permissões Básicas | Aula 02 - Administração de Usuários, Grupos e Permissões/README.md |
-| **Aula 03** | Estrutura de Diretórios (FHS) e Permissões Avançadas | Aula 03 - Estrutura de Diretórios, Pastas do Sistema e Permissões FHS/README.md |
-| **Aula 04** | Configuração de Acesso Remoto Seguro com OpenSSH | Aula 04 - Manipulação, Edição, Permissões e Automação de Arquivos no Linux |
-| **Aula 05** | Conectividade Avançada via Rede Host-Only no VirtualBox | Aula 05 - Acesso Remoto SSH via Redirecionamento de Portas no VirtualBox e Diagnóstico de Rede |
-| **Aula 06** | Configuração de Nomes Estáticos de Host | Aula 06 - Configuração de Rede Estática com Netplan e Modo Placa em Ponte |
-| **Aula 07** | Implantação de Rede Virtual Privada com OpenVPN | Aula 07 - (Em Breve) |
+| Aula | Tema |
+| :--- | :--- |
+| **Aula 01** | Aula 01 - Instalação e Configuração Básica do Ubuntu Server/README.md |
+| **Aula 02** | Aula 02 - Administração de Usuários, Grupos e Permissões/README.md |
+| **Aula 03** | Aula 03 - Estrutura de Diretórios, Pastas do Sistema e Permissões FHS/README.md |
+| **Aula 04** | Aula 04 - Manipulação, Edição, Permissões e Automação de Arquivos no Linux |
+| **Aula 05** | Aula 05 - Acesso Remoto SSH via Redirecionamento de Portas no VirtualBox e Diagnóstico de Rede |
+| **Aula 06** | Aula 06 - Configuração de Rede Estática com Netplan e Modo Placa em Ponte |
+| **Aula 07** | Aula 07 - Roteamento e Gateway NAT com IPTables e Rede Interna no VirtualBox |
+| **Aula 08** | Aula 08 - Configuração do Gateway (VM1) — IPTables, NAT e Testes |
 
 
 ---
-
-## 📂 Visão Geral do Aprendizado
-
-* **Infraestrutura e Virtualização:** Instalação do SO, particionamento com LVM e acesso remoto via SSH.
-* **Administração de Sistemas:** Gerenciamento do ciclo de vida de usuários, grupos e navegação no FHS (`/etc`, `/var`, `/srv`, `/home`).
-* **Segurança e Acesso:** Aplicação e validação de permissões de arquivo/diretório (`chmod`, `chown`, `chgrp`, permissões `770` e `660`).
